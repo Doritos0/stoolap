@@ -1,0 +1,13 @@
+[project]
+name = "stoolap-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "alembic>=1.20.0",
+    "dotenv>=0.9.9",
+    "fastapi>=0.141.1",
+    "pathlib>=1.0.1",
+    "stoolap-python>=0.4.1",
+]
