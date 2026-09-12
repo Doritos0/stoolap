@@ -3,7 +3,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from stoolap import Database
 
-from config.engine_config import get_engine
+from src.config.engine_config import get_engine
 
 TABLAS = [
     """

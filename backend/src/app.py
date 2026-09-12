@@ -10,7 +10,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from config.engine_config import get_engine
+from src.config.engine_config import get_engine
 
 title = "Prueba Stoolap"
 version = "0.1.0"

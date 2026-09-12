@@ -10,4 +10,5 @@ dependencies = [
     "fastapi>=0.141.1",
     "pathlib>=1.0.1",
     "stoolap-python>=0.4.1",
+    "uvicorn>=0.52.4",
 ]
