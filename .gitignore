@@ -11,3 +11,4 @@ wheels/
 
 # Database
 stoolap-test/
+src/.env-desarrollo
