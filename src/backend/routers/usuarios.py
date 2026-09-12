@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import APIRouter
 from pydantic import BaseModel
 
@@ -10,9 +12,15 @@ class UsuarioIn(BaseModel):
     nombre: str
     email: str
 
+class UsuarioOut(BaseModel):
+    id: int
+    nombre: str
+    email: str
+    creado: datetime
+
 
 @router.get("")
-def listar_usuarios():
+def listar_usuarios() -> list[UsuarioOut]:
     return get_engine().query("SELECT * FROM usuarios ORDER BY id")
 
 

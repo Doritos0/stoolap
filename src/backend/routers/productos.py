@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import APIRouter
 from pydantic import BaseModel
 
@@ -11,9 +13,15 @@ class ProductoIn(BaseModel):
     precio: float
     stock: int = 0
 
+class ProductoOut(BaseModel):
+    id: int
+    nombre: str
+    precio: float
+    stock: int
+    creado: datetime
 
 @router.get("")
-def listar_productos():
+def listar_productos() -> list[ProductoOut]:
     return get_engine().query("SELECT * FROM productos ORDER BY id")
 
 
